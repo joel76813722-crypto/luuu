@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Lu, Mi Amor ❤️ | De Joel</title>
+    <title>Para Lucero, Mi Vida ❤️ | De Joel</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Playfair Display, Montserrat & Great Vibes -->
@@ -74,13 +74,12 @@
         }
 
         .glass-modal {
-            background: rgba(27, 4, 12, 0.92);
+            background: rgba(27, 4, 12, 0.94);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(251, 113, 133, 0.3);
         }
 
-        /* Ambient Glow & Floating FX */
         .glow-avatar {
             box-shadow: 0 0 35px rgba(244, 63, 94, 0.5), 0 0 15px rgba(234, 179, 8, 0.4);
         }
@@ -103,7 +102,6 @@
             animation: pulseGlow 3s ease-in-out infinite;
         }
 
-        /* Canvas Elements */
         #bgCanvas, #heartsCanvas {
             position: fixed;
             top: 0;
@@ -116,12 +114,10 @@
         #bgCanvas { z-index: 1; }
         #heartsCanvas { z-index: 999; }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #18030a; }
         ::-webkit-scrollbar-thumb { background: #be123c; border-radius: 4px; }
 
-        /* Envelope Styles */
         .envelope-wrapper {
             perspective: 1000px;
         }
@@ -209,7 +205,6 @@
             pointer-events: none;
         }
 
-        /* Equalizer Animation */
         .eq-bar {
             width: 3px;
             height: 12px;
@@ -227,30 +222,25 @@
 </head>
 <body class="relative text-rose-50 antialiased selection:bg-rose-500 selection:text-white">
 
-    <!-- Canvas de destellos de fondo -->
     <canvas id="bgCanvas"></canvas>
-
-    <!-- Canvas para la animación masiva de corazones -->
     <canvas id="heartsCanvas"></canvas>
 
-    <!-- Barra de Música y Gestores Superiores -->
+    <!-- Barra de Control Flotante -->
     <header class="fixed top-4 left-0 right-0 z-50 px-4 max-w-4xl mx-auto flex items-center justify-between pointer-events-none">
         
-        <!-- Panel de Ajustes / Subir Archivos Localmente -->
         <div class="pointer-events-auto flex items-center space-x-2">
             <button id="btnOpenManager" class="glass-card px-4 py-2 rounded-full text-xs font-semibold text-amber-300 hover:text-amber-100 flex items-center space-x-2 transition hover:scale-105 active:scale-95 border border-amber-500/30">
                 <i class="fas fa-sliders text-sm"></i>
-                <span class="hidden sm:inline">Gestionar Fotos y Música</span>
+                <span class="hidden sm:inline">Gestionar Fotos, Música y Respaldo</span>
             </button>
         </div>
 
-        <!-- Reproductor de Música Flotante -->
         <div class="pointer-events-auto glass-card rounded-full p-2 pr-4 flex items-center space-x-3 shadow-2xl border border-rose-500/30">
             <button id="musicToggle" class="w-10 h-10 rounded-full bg-gradient-to-r from-rose-600 to-amber-500 flex items-center justify-center text-white hover:scale-110 active:scale-95 transition shadow-lg">
                 <i id="musicIcon" class="fas fa-play text-xs ml-0.5"></i>
             </button>
             <div class="flex flex-col min-w-[90px] max-w-[130px] sm:max-w-[180px]">
-                <span id="musicTitle" class="text-[11px] font-medium text-amber-200 truncate">Mi canción para Lu</span>
+                <span id="musicTitle" class="text-[11px] font-medium text-amber-200 truncate">Mi canción para Lucero</span>
                 <div class="flex items-center space-x-1 mt-0.5">
                     <div id="eqContainer" class="hidden flex items-center space-x-0.5 mr-1">
                         <div class="eq-bar"></div>
@@ -267,22 +257,19 @@
     <!-- Layout Principal -->
     <main class="relative z-10 max-w-3xl mx-auto px-4 pt-24 pb-16 flex flex-col items-center gap-16 md:gap-24">
 
-        <!-- ==================== SECCIÓN 1: PORTADA ==================== -->
+        <!-- PORTADA -->
         <section class="flex flex-col items-center text-center mt-4 animate-float">
             <div class="relative group">
-                <!-- Anillo decorativo dorado/rosa -->
                 <div class="absolute -inset-2 bg-gradient-to-r from-amber-400 via-rose-500 to-amber-300 rounded-full blur-md opacity-75 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
                 
-                <!-- Foto de Portada Principal -->
                 <div class="relative w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-amber-200/50 glow-avatar bg-rose-950">
                     <img id="mainAvatar" 
                          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%232b0813'/%3E%3Cpath d='M150 210s-60-38-80-70c-18-28-5-65 25-72 23-5 43 8 55 24 12-16 32-29 55-24 30 7 43 44 25 72-20 32-80 70-80 70z' fill='%23be123c'/%3E%3Ctext x='150' y='250' font-family='sans-serif' font-size='14' fill='%23fef08a' text-anchor='middle'%3ENuestra Foto Especial%3C/text%3E%3C/svg%3E" 
-                         alt="Foto de Joel y Lu" 
+                         alt="Foto de Joel y Lucero" 
                          class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out"
                     />
                 </div>
 
-                <!-- Insignia de corazón -->
                 <div class="absolute bottom-2 right-2 bg-gradient-to-tr from-rose-600 to-amber-500 text-white p-3 rounded-full shadow-xl border border-amber-200/50 flex items-center justify-center">
                     <i class="fas fa-heart text-xl animate-bounce"></i>
                 </div>
@@ -290,7 +277,7 @@
 
             <div class="mt-8 space-y-3">
                 <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-amber-300 bg-rose-950/70 border border-amber-500/30 backdrop-blur-md">
-                    Para: Lu, mi amor • De: Joel
+                    Para: Lucero (Lu, mi amor) • De: Joel
                 </span>
                 <h1 class="font-playfair text-3xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-rose-100 to-amber-300 drop-shadow-sm leading-tight px-2">
                     Nuestra historia todavía tiene mucho por escribir
@@ -306,8 +293,7 @@
             </a>
         </section>
 
-
-        <!-- ==================== SECCIÓN 2: NUESTRA HISTORIA ==================== -->
+        <!-- NUESTRA HISTORIA -->
         <section id="historia" class="w-full scroll-mt-28">
             <div class="glass-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
                 <div class="text-center mb-10">
@@ -317,796 +303,36 @@
                 </div>
 
                 <div class="relative border-l-2 border-rose-500/30 ml-4 sm:ml-8 space-y-8">
-                    <!-- Evento 1 -->
                     <div class="relative pl-6 sm:pl-8 group">
                         <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-rose-950 group-hover:scale-125 transition"></div>
                         <span class="text-xs font-semibold text-amber-300/80 uppercase tracking-wider">Capítulo I</span>
                         <h3 class="font-playfair text-lg sm:text-xl font-semibold text-rose-100">El Amor a Distancia</h3>
                         <p class="text-xs sm:text-sm text-rose-200/80 mt-1 leading-relaxed">
-                            Estuvimos aproximadamente un año compartiendo una relación a distancia. Pese a los kilómetros que nos separaban, cada llamada, cada mensaje y cada recuerdo construyeron un sentimiento sincero y profundo en mi corazón.
+                            Estuvimos aproximadamente un año compartiendo una relación a distancia. Pese a los kilómetros que nos separaban, mi cielo, cada llamada, cada mensaje y cada recuerdo construyeron un sentimiento sincero y profundo en mi corazón.
                         </p>
                     </div>
 
-                    <!-- Evento 2 -->
                     <div class="relative pl-6 sm:pl-8 group">
                         <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-rose-500 border-4 border-rose-950 group-hover:scale-125 transition"></div>
                         <span class="text-xs font-semibold text-amber-300/80 uppercase tracking-wider">Capítulo II</span>
                         <h3 class="font-playfair text-lg sm:text-xl font-semibold text-rose-100">La Pausa</h3>
                         <p class="text-xs sm:text-sm text-rose-200/80 mt-1 leading-relaxed">
-                            Por distintas circunstancias de la vida, nuestros caminos tuvieron que tomar un tiempo de separación. Sin embargo, lo que se siente con el alma nunca desaparece por completo.
+                            Por distintas circunstancias de la vida, nuestros caminos tuvieron que tomar un tiempo de separación. Sin embargo, mi vida, lo que se siente con el alma nunca desaparece por completo.
                         </p>
                     </div>
 
-                    <!-- Evento 3 -->
                     <div class="relative pl-6 sm:pl-8 group">
                         <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-300 border-4 border-rose-950 group-hover:scale-125 transition animate-pulse"></div>
                         <span class="text-xs font-semibold text-amber-300 uppercase tracking-wider">17 de Octubre de 2026</span>
                         <h3 class="font-playfair text-lg sm:text-xl font-semibold text-amber-200">Nuestro Nuevo Comienzo</h3>
                         <p class="text-xs sm:text-sm text-rose-100 mt-1 leading-relaxed font-light">
-                            Decidimos darnos una nueva oportunidad y retomar lo nuestro. Ese día volvimos a elegirnos para caminar juntos y escribir este nuevo capítulo con más fuerza, madurez y amor.
+                            Decidimos darnos una nueva oportunidad y retomar lo nuestro. Ese día volvimos a elegirnos para caminar juntos, amor mío, y escribir este nuevo capítulo con más fuerza, madurez y amor.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- ==================== SECCIÓN 3: FRASES ESPECIALES ==================== -->
+        <!-- FRASES ESPECIALES -->
         <section class="w-full">
-            <div class="glass-card-gold rounded-3xl p-6 sm:p-10 relative overflow-hidden text-center border-amber-400/30">
-                <i class="fas fa-quote-left text-amber-400/20 text-5xl absolute top-4 left-6"></i>
-                <i class="fas fa-quote-right text-amber-400/20 text-5xl absolute bottom-4 right-6"></i>
-
-                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Lo que siempre te digo</span>
-                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-amber-100 mt-1 mb-8">Nuestras Promesas</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-                    <div class="p-6 bg-rose-950/40 rounded-2xl border border-amber-500/20 flex flex-col items-center justify-center space-y-3">
-                        <div class="w-12 h-12 rounded-full bg-amber-400/10 flex items-center justify-center text-amber-300 text-xl mb-1">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <p class="font-cursive text-3xl sm:text-4xl text-amber-200">«Estaremos juntos hasta pasitas»</p>
-                        <p class="text-xs text-rose-200/70 font-light">Porque nuestro amor está hecho para durar toda la vida y envejecer uno al lado del otro.</p>
-                    </div>
-
-                    <div class="p-6 bg-rose-950/40 rounded-2xl border border-amber-500/20 flex flex-col items-center justify-center space-y-3">
-                        <div class="w-12 h-12 rounded-full bg-amber-400/10 flex items-center justify-center text-amber-300 text-xl mb-1">
-                            <i class="fas fa-compass"></i>
-                        </div>
-                        <p class="font-cursive text-3xl sm:text-4xl text-amber-200">«Adonde tú vayas, yo iré contigo»</p>
-                        <p class="text-xs text-rose-200/70 font-light">No importa la ciudad, el lugar ni el camino: mi lugar favorito en el mundo siempre será a tu lado.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ==================== SECCIÓN 4: CONTADOR DE NUESTRA RELACIÓN ==================== -->
-        <section class="w-full text-center">
-            <div class="glass-card rounded-3xl p-6 sm:p-10 relative">
-                <span class="inline-block px-4 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest text-amber-300 bg-rose-950/60 border border-amber-500/30 mb-3">
-                    Desde el 17 de Octubre de 2026
-                </span>
-                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-amber-200 mb-1">
-                    Desde que decidimos volver a escribir nuestra historia
-                </h2>
-                <p class="text-xs sm:text-sm text-rose-200/70 mb-8 font-light">
-                    Cada segundo a tu lado, Lu, es un regalo que valoro con todo mi ser.
-                </p>
-
-                <!-- Grid de Unidades del Contador -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-                    <!-- Años -->
-                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
-                        <span id="timerYears" class="font-playfair text-2xl sm:text-4xl font-bold text-amber-300">00</span>
-                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Años</span>
-                    </div>
-                    <!-- Meses -->
-                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
-                        <span id="timerMonths" class="font-playfair text-2xl sm:text-4xl font-bold text-rose-200">00</span>
-                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Meses</span>
-                    </div>
-                    <!-- Días -->
-                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
-                        <span id="timerDays" class="font-playfair text-2xl sm:text-4xl font-bold text-amber-300">00</span>
-                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Días</span>
-                    </div>
-                    <!-- Horas -->
-                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
-                        <span id="timerHours" class="font-playfair text-2xl sm:text-4xl font-bold text-rose-200">00</span>
-                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Horas</span>
-                    </div>
-                    <!-- Minutos -->
-                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
-                        <span id="timerMinutes" class="font-playfair text-2xl sm:text-4xl font-bold text-rose-200">00</span>
-                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Minutos</span>
-                    </div>
-                    <!-- Segundos -->
-                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
-                        <span id="timerSeconds" class="font-playfair text-2xl sm:text-4xl font-bold text-amber-300 animate-pulse">00</span>
-                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Segundos</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ==================== SECCIÓN 5: GALERÍA DE RECUERDOS ==================== -->
-        <section class="w-full">
-            <div class="text-center mb-8">
-                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Nuestros Momentos</span>
-                <h2 class="font-playfair text-2xl sm:text-4xl font-bold text-rose-100 mt-1">Galería de Recuerdos</h2>
-                <p class="text-xs text-rose-200/70 mt-1">Toca cualquier fotografía para ampliarla</p>
-            </div>
-
-            <!-- Grid de Fotos Cargadas Dinámicamente -->
-            <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
-                <!-- Se llena mediante JS desde IndexedDB -->
-            </div>
-        </section>
-
-
-        <!-- ==================== SECCIÓN 6: NUESTRO FUTURO JUNTOS ==================== -->
-        <section class="w-full">
-            <div class="glass-card rounded-3xl p-6 sm:p-10 relative overflow-hidden border-rose-400/20">
-                <div class="text-center mb-8">
-                    <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Mirando hacia adelante</span>
-                    <h2 class="font-playfair text-2xl sm:text-4xl font-bold text-amber-200 mt-1">Nuestro Futuro Juntos</h2>
-                    <p class="text-xs text-rose-200/80 mt-2 max-w-lg mx-auto font-light">
-                        No sabemos exactamente cuándo será, pero tenemos la certeza absoluta del camino que queremos construir.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="p-5 bg-rose-950/40 rounded-2xl border border-rose-500/20 text-center space-y-2">
-                        <i class="fas fa-rings-wedding text-amber-300 text-2xl mb-1"></i>
-                        <h3 class="font-playfair font-semibold text-rose-100">Nuestro Sueño</h3>
-                        <p class="text-xs text-rose-200/70 font-light leading-relaxed">El deseo sincero de casarnos y celebrar nuestro amor rodeados de las personas que más queremos.</p>
-                    </div>
-
-                    <div class="p-5 bg-rose-950/40 rounded-2xl border border-rose-500/20 text-center space-y-2">
-                        <i class="fas fa-house-heart text-amber-300 text-2xl mb-1"></i>
-                        <h3 class="font-playfair font-semibold text-rose-100">Un Hogar Propio</h3>
-                        <p class="text-xs text-rose-200/70 font-light leading-relaxed">Construir nuestro espacio lleno de paz, risas, detalles y sueños compartidos día a día.</p>
-                    </div>
-
-                    <div class="p-5 bg-rose-950/40 rounded-2xl border border-rose-500/20 text-center space-y-2 sm:col-span-2 md:col-span-1">
-                        <i class="fas fa-hand-holding-heart text-amber-300 text-2xl mb-1"></i>
-                        <h3 class="font-playfair font-semibold text-rose-100">Caminar Juntos</h3>
-                        <p class="text-xs text-rose-200/70 font-light leading-relaxed">Acompañarnos en cada etapa, superar cualquier obstáculo y llegar a viejitos con las manos entrelazadas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ==================== SECCIÓN 7: UNA CARTA PARA LU ==================== -->
-        <section class="w-full flex flex-col items-center">
-            <div class="text-center mb-8">
-                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">De mi corazón al tuyo</span>
-                <h2 class="font-playfair text-2xl sm:text-4xl font-bold text-rose-100 mt-1">Una Carta Para Ti</h2>
-                <p class="text-xs text-rose-200/70 mt-1">Presiona el sobre para abrir la carta</p>
-            </div>
-
-            <!-- SOBRE ANIMADO -->
-            <div class="envelope-wrapper">
-                <div id="envelope" class="envelope">
-                    <div class="envelope-flap"></div>
-                    <div class="envelope-pocket"></div>
-                    <div class="envelope-seal">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ==================== SECCIÓN 8: MENSAJES SECRETOS ==================== -->
-        <section class="w-full text-center">
-            <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Detalles Interactivos</span>
-            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-rose-100 mt-1 mb-6">Mensajes Secretos</h2>
-            
-            <div class="flex flex-wrap items-center justify-center gap-3">
-                <button onclick="revealSecret(1)" class="px-5 py-2.5 glass-card rounded-full text-xs font-medium text-rose-200 hover:text-amber-300 hover:scale-105 transition active:scale-95 border border-rose-500/20 flex items-center space-x-2">
-                    <i class="fas fa-heart text-rose-500"></i>
-                    <span>Toca aquí ❤️</span>
-                </button>
-
-                <button onclick="revealSecret(2)" class="px-5 py-2.5 glass-card rounded-full text-xs font-medium text-rose-200 hover:text-amber-300 hover:scale-105 transition active:scale-95 border border-rose-500/20 flex items-center space-x-2">
-                    <i class="fas fa-star text-amber-400"></i>
-                    <span>Un secreto ✨</span>
-                </button>
-
-                <button onclick="revealSecret(3)" class="px-5 py-2.5 glass-card rounded-full text-xs font-medium text-rose-200 hover:text-amber-300 hover:scale-105 transition active:scale-95 border border-rose-500/20 flex items-center space-x-2">
-                    <i class="fas fa-sparkles text-rose-400"></i>
-                    <span>Para Lu 🌹</span>
-                </button>
-            </div>
-
-            <div id="secretDisplay" class="mt-6 hidden p-4 glass-card rounded-2xl max-w-md mx-auto text-sm text-amber-200 font-cursive text-xl animate-fade-in border border-amber-400/30">
-            </div>
-        </section>
-
-
-        <!-- ==================== SECCIÓN 9: SORPRESA ==================== -->
-        <section class="w-full text-center">
-            <div class="glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col items-center">
-                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Especial para ti</span>
-                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-rose-100 mt-1 mb-6">Una Sorpresa Para Lu</h2>
-
-                <button id="giftBox" class="w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-tr from-rose-700 to-amber-500 rounded-2xl shadow-2xl flex items-center justify-center text-white text-4xl hover:scale-110 active:scale-95 transition duration-300 border-2 border-amber-300/40 animate-bounce relative group">
-                    <i class="fas fa-gift group-hover:rotate-12 transition"></i>
-                    <span class="absolute -bottom-7 text-[10px] text-amber-300 font-light tracking-wide whitespace-nowrap">Toca para abrir</span>
-                </button>
-            </div>
-        </section>
-
-
-        <!-- ==================== SECCIÓN 10: FINAL ==================== -->
-        <section class="w-full text-center py-8">
-            <div class="glass-card-gold rounded-3xl p-8 sm:p-12 relative overflow-hidden border-amber-400/40">
-                <i class="fas fa-heart text-rose-500 text-4xl mb-4 pulse-glow"></i>
-                <p class="font-playfair text-lg sm:text-2xl md:text-3xl text-amber-100 font-semibold leading-relaxed max-w-2xl mx-auto">
-                    «No podemos cambiar lo que pasó, pero sí podemos decidir cómo continúa nuestra historia. Y si algo tengo claro, es que quiero seguir escribiéndola contigo, Lu, mi amor.»
-                </p>
-                <p class="font-cursive text-3xl text-amber-300 mt-6">
-                    Con todo mi amor, Joel ❤️
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="relative z-10 text-center py-6 text-xs text-rose-300/50 font-light border-t border-rose-900/30">
-        Hecho con todo mi corazón por Joel para Lu, mi amor ✨
-    </footer>
-
-
-    <!-- ==================== MODALES ==================== -->
-
-    <!-- 1. Modal de la Carta -->
-    <div id="modalLetter" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-500">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeLetter()"></div>
-        <div class="glass-modal max-w-xl w-full rounded-3xl p-6 sm:p-10 relative z-10 transform scale-90 transition-all duration-500 max-h-[85vh] overflow-y-auto border border-amber-400/30">
-            <button onclick="closeLetter()" class="absolute top-4 right-4 text-rose-300 hover:text-amber-300 text-xl w-8 h-8 rounded-full bg-rose-950/60 flex items-center justify-center">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="text-center mb-6">
-                <span class="font-cursive text-3xl text-amber-300">Mi querida Lu,</span>
-            </div>
-            <div class="font-montserrat text-xs sm:text-sm text-rose-100/90 leading-relaxed space-y-4 text-justify font-light">
-                <p>
-                    Escribo estas palabras con la certeza de que el destino sabe reunir a quienes verdaderamente pertenecen juntos. Pasamos por una etapa a distancia que nos puso a prueba, y aunque después la vida nos llevó por caminos separados durante un tiempo, jamás dejaste de habitar en un rincón de mis pensamientos.
-                </p>
-                <p>
-                    El 17 de octubre de 2026 marcó el inicio de nuestra oportunidad más bonita. Decidir retomar lo nuestro no fue solo volver a intentar, sino elegirnos con más convicción, madurez y amor del que jamás hayamos sentido.
-                </p>
-                <p>
-                    Quiero recordarte dos certezas que llevo grabadas en el alma: que <strong class="text-amber-200">estaremos juntos hasta pasitas</strong>, y que <strong class="text-amber-200">adonde tú vayas, yo iré contigo</strong>. No importa los retos que vengan, mi sueño es seguir construyendo nuestro futuro, casarnos algún día, formar un hogar y envejecer a tu lado.
-                </p>
-                <p class="text-right font-cursive text-2xl text-amber-300 pt-2">
-                    Tuyo por siempre, Joel ❤️
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. Modal Ver Foto Grande -->
-    <div id="modalImage" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-300">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeImageModal()"></div>
-        <div class="relative z-10 max-w-2xl w-full flex flex-col items-center">
-            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white hover:text-amber-300 text-2xl">
-                <i class="fas fa-times"></i>
-            </button>
-            <img id="modalImageTarget" src="" alt="Ampliada" class="max-h-[75vh] rounded-2xl border-2 border-amber-300/40 shadow-2xl object-contain">
-            <p id="modalImageCaption" class="mt-4 text-center text-sm font-light text-amber-200 font-playfair"></p>
-        </div>
-    </div>
-
-    <!-- 3. Modal Sorpresa / Regalo -->
-    <div id="modalGift" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-500">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeGiftModal()"></div>
-        <div class="glass-modal max-w-md w-full rounded-3xl p-8 text-center relative z-10 transform scale-90 transition-all duration-500 border-2 border-amber-400/40">
-            <div class="w-16 h-16 bg-gradient-to-tr from-rose-500 to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
-                <i class="fas fa-grin-hearts text-white text-3xl"></i>
-            </div>
-            <h3 class="font-playfair text-2xl font-bold text-amber-200 mb-2">¡Eres mi mayor regalo, Lu!</h3>
-            <p class="font-montserrat text-xs text-rose-100 leading-relaxed mb-6 font-light">
-                Gracias por volver a mi vida y llenar cada uno de mis días de felicidad. Prometo cuidar tu corazón hoy, mañana y siempre.
-            </p>
-            <button onclick="closeGiftModal()" class="px-6 py-2.5 bg-gradient-to-r from-rose-600 to-amber-500 text-white font-semibold rounded-full text-xs shadow-md hover:scale-105 active:scale-95 transition">
-                Te Amo ❤️
-            </button>
-        </div>
-    </div>
-
-    <!-- 4. Modal Gestor de Archivos Locales (IndexedDB) -->
-    <div id="modalManager" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-300">
-        <div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="closeManager()"></div>
-        <div class="glass-modal max-w-2xl w-full rounded-3xl p-6 relative z-10 max-h-[85vh] overflow-y-auto border border-amber-500/30">
-            <button onclick="closeManager()" class="absolute top-4 right-4 text-rose-300 hover:text-amber-300 text-xl">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <h3 class="font-playfair text-xl font-bold text-amber-200 mb-1 flex items-center space-x-2">
-                <i class="fas fa-images"></i>
-                <span>Gestor de Fotos y Música</span>
-            </h3>
-            <p class="text-xs text-rose-200/70 mb-6 font-light">
-                Sube las fotos y canciones desde tu equipo. Se guardarán únicamente en tu navegador.
-            </p>
-
-            <!-- Sección Música -->
-            <div class="mb-6 p-4 bg-rose-950/50 rounded-2xl border border-rose-500/20">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-2">Música de Fondo (.mp3)</h4>
-                <input type="file" id="inputAudio" accept="audio/*" class="block w-full text-xs text-rose-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rose-900 file:text-amber-200 hover:file:bg-rose-800 cursor-pointer">
-            </div>
-
-            <!-- Sección Fotografías -->
-            <div class="p-4 bg-rose-950/50 rounded-2xl border border-rose-500/20">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-2">Agregar Fotografías</h4>
-                <input type="file" id="inputPhotos" accept="image/*" multiple class="block w-full text-xs text-rose-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rose-900 file:text-amber-200 hover:file:bg-rose-800 cursor-pointer">
-                
-                <div id="managerPhotoList" class="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-4 max-h-60 overflow-y-auto p-1">
-                    <!-- Fotos cargadas -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ==================== JAVASCRIPT ==================== -->
-    <script>
-        /* ===================================================================
-           1. CONFIGURACIÓN BÁSICA Y FECHAS
-           =================================================================== */
-        // Fecha exacta de reconciliación: 17 de Octubre de 2026
-        const FECHA_RECONCILIACION = new Date('2026-10-17T00:00:00');
-
-        function actualizarContador() {
-            const ahora = new Date();
-            let diferencia = ahora - FECHA_RECONCILIACION;
-
-            if (diferencia < 0) {
-                document.getElementById('timerYears').innerText = "00";
-                document.getElementById('timerMonths').innerText = "00";
-                document.getElementById('timerDays').innerText = "00";
-                document.getElementById('timerHours').innerText = "00";
-                document.getElementById('timerMinutes').innerText = "00";
-                document.getElementById('timerSeconds').innerText = "00";
-                return;
-            }
-
-            // Cálculo completo de Años, Meses, Días, Horas, Minutos, Segundos
-            let inicio = new Date(FECHA_RECONCILIACION);
-            let anios = ahora.getFullYear() - inicio.getFullYear();
-            let meses = ahora.getMonth() - inicio.getMonth();
-            let dias = ahora.getDate() - inicio.getDate();
-
-            if (dias < 0) {
-                meses--;
-                let ultimoDiaMesAnterior = new Date(ahora.getFullYear(), ahora.getMonth(), 0).getDate();
-                dias += ultimoDiaMesAnterior;
-            }
-            if (meses < 0) {
-                anios--;
-                meses += 12;
-            }
-
-            const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-            const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-            const segundos = Math.floor((diferencia / 1000) % 60);
-
-            document.getElementById('timerYears').innerText = String(anios).padStart(2, '0');
-            document.getElementById('timerMonths').innerText = String(meses).padStart(2, '0');
-            document.getElementById('timerDays').innerText = String(dias).padStart(2, '0');
-            document.getElementById('timerHours').innerText = String(horas).padStart(2, '0');
-            document.getElementById('timerMinutes').innerText = String(minutos).padStart(2, '0');
-            document.getElementById('timerSeconds').innerText = String(segundos).padStart(2, '0');
-        }
-
-        setInterval(actualizarContador, 1000);
-        actualizarContador();
-
-
-        /* ===================================================================
-           2. BASE DE DATOS LOCAL (IndexedDB para guardar Fotos y Música)
-           =================================================================== */
-        let db;
-        const request = indexedDB.open("MiHistoriaConLuDB", 1);
-
-        request.onupgradeneeded = function(e) {
-            db = e.target.result;
-            if (!db.objectStoreNames.contains("photos")) {
-                db.createObjectStore("photos", { keyPath: "id", autoIncrement: true });
-            }
-            if (!db.objectStoreNames.contains("music")) {
-                db.createObjectStore("music", { keyPath: "id" });
-            }
-        };
-
-        request.onsuccess = function(e) {
-            db = e.target.result;
-            cargarFotosDesdeDB();
-            cargarMusicaDesdeDB();
-        };
-
-        // Guardar Música en IndexedDB
-        document.getElementById('inputAudio').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(evt) {
-                const tx = db.transaction("music", "readwrite");
-                const store = tx.objectStore("music");
-                store.put({ id: "bgMusic", data: evt.target.result, name: file.name });
-                tx.oncomplete = function() {
-                    cargarMusicaDesdeDB();
-                };
-            };
-            reader.readAsDataURL(file);
-        });
-
-        function cargarMusicaDesdeDB() {
-            if (!db) return;
-            const tx = db.transaction("music", "readonly");
-            const store = tx.objectStore("music");
-            const req = store.get("bgMusic");
-
-            req.onsuccess = function() {
-                if (req.result) {
-                    const audioEl = document.getElementById('bgAudio');
-                    audioEl.src = req.result.data;
-                    document.getElementById('musicTitle').innerText = req.result.name || "Nuestra Canción";
-                }
-            };
-        }
-
-        // Guardar Fotos en IndexedDB
-        document.getElementById('inputPhotos').addEventListener('change', function(e) {
-            const files = e.target.files;
-            if (!files.length) return;
-
-            Array.from(files).forEach((file, index) => {
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    const tx = db.transaction("photos", "readwrite");
-                    const store = tx.objectStore("photos");
-                    store.add({ 
-                        data: evt.target.result, 
-                        isMain: false,
-                        caption: `Recuerdo ${new Date().toLocaleDateString()}` 
-                    });
-                    tx.oncomplete = function() {
-                        cargarFotosDesdeDB();
-                    };
-                };
-                reader.readAsDataURL(file);
-            });
-        });
-
-        function cargarFotosDesdeDB() {
-            if (!db) return;
-            const tx = db.transaction("photos", "readonly");
-            const store = tx.objectStore("photos");
-            const req = store.getAll();
-
-            req.onsuccess = function() {
-                const photos = req.result;
-                const galleryGrid = document.getElementById('galleryGrid');
-                const managerPhotoList = document.getElementById('managerPhotoList');
-                
-                galleryGrid.innerHTML = '';
-                managerPhotoList.innerHTML = '';
-
-                if (photos.length === 0) {
-                    galleryGrid.innerHTML = `
-                        <div class="col-span-full text-center py-8 text-xs text-rose-200/50 font-light">
-                            Aún no has agregado fotos. Toca "Gestionar Fotos y Música" arriba para cargar tus recuerdos.
-                        </div>
-                    `;
-                    return;
-                }
-
-                photos.forEach((photo) => {
-                    if (photo.isMain) {
-                        document.getElementById('mainAvatar').src = photo.data;
-                    }
-
-                    // Elemento Galería
-                    const card = document.createElement('div');
-                    card.className = "group relative aspect-square rounded-2xl overflow-hidden glass-card cursor-pointer border border-rose-500/20 hover:border-amber-400/50 transition duration-300";
-                    card.onclick = () => openImageModal(photo.data, photo.caption);
-                    card.innerHTML = `
-                        <img src="${photo.data}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Recuerdo de Joel y Lu">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                            <span class="text-[11px] text-amber-200 font-medium truncate">${photo.caption}</span>
-                        </div>
-                    `;
-                    galleryGrid.appendChild(card);
-
-                    // Elemento Gestor
-                    const managerCard = document.createElement('div');
-                    managerCard.className = "relative aspect-square rounded-lg overflow-hidden border border-rose-500/30 group";
-                    managerCard.innerHTML = `
-                        <img src="${photo.data}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center space-x-2">
-                            <button onclick="setMainPhoto(${photo.id})" title="Usar como Portada Principal" class="text-amber-300 hover:text-amber-100 text-xs p-1">
-                                <i class="fas fa-star"></i>
-                            </button>
-                            <button onclick="deletePhoto(${photo.id})" title="Eliminar" class="text-rose-400 hover:text-rose-200 text-xs p-1">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    `;
-                    managerPhotoList.appendChild(managerCard);
-                });
-            };
-        }
-
-        function setMainPhoto(id) {
-            const tx = db.transaction("photos", "readwrite");
-            const store = tx.objectStore("photos");
-            store.getAll().onsuccess = function(e) {
-                const photos = e.target.result;
-                photos.forEach(p => {
-                    p.isMain = (p.id === id);
-                    store.put(p);
-                });
-                tx.oncomplete = cargarFotosDesdeDB;
-            };
-        }
-
-        function deletePhoto(id) {
-            const tx = db.transaction("photos", "readwrite");
-            store = tx.objectStore("photos");
-            store.delete(id);
-            tx.oncomplete = cargarFotosDesdeDB;
-        }
-
-
-        /* ===================================================================
-           3. REPRODUCTOR DE MÚSICA
-           =================================================================== */
-        const bgAudio = document.getElementById('bgAudio');
-        const musicToggle = document.getElementById('musicToggle');
-        const musicIcon = document.getElementById('musicIcon');
-        const volumeSlider = document.getElementById('volumeSlider');
-        const eqContainer = document.getElementById('eqContainer');
-
-        musicToggle.addEventListener('click', () => {
-            if (!bgAudio.src) {
-                alert("Primero sube un archivo MP3 tocando en 'Gestionar Fotos y Música'.");
-                return;
-            }
-            if (bgAudio.paused) {
-                bgAudio.play();
-                musicIcon.className = "fas fa-pause text-xs";
-                eqContainer.classList.remove('hidden');
-            } else {
-                bgAudio.pause();
-                musicIcon.className = "fas fa-play text-xs ml-0.5";
-                eqContainer.classList.add('hidden');
-            }
-        });
-
-        volumeSlider.addEventListener('input', (e) => {
-            bgAudio.volume = e.target.value;
-        });
-
-
-        /* ===================================================================
-           4. SOBRE 3D Y CARTA
-           =================================================================== */
-        const envelope = document.getElementById('envelope');
-        envelope.addEventListener('click', () => {
-            envelope.classList.add('open');
-            setTimeout(() => {
-                const letterModal = document.getElementById('modalLetter');
-                letterModal.classList.remove('opacity-0', 'pointer-events-none');
-                letterModal.querySelector('.glass-modal').classList.remove('scale-90');
-                letterModal.querySelector('.glass-modal').classList.add('scale-100');
-            }, 600);
-        });
-
-        function closeLetter() {
-            const letterModal = document.getElementById('modalLetter');
-            letterModal.classList.add('opacity-0', 'pointer-events-none');
-            letterModal.querySelector('.glass-modal').classList.remove('scale-100');
-            letterModal.querySelector('.glass-modal').classList.add('scale-90');
-            setTimeout(() => {
-                envelope.classList.remove('open');
-            }, 300);
-        }
-
-
-        /* ===================================================================
-           5. MENSAJES SECRETOS Y REGALO
-           =================================================================== */
-        const secrets = {
-            1: "Eres la razón por la que mi sonrisa es más sincera cada día. ❤️",
-            2: "Prometo cuidar de ti, apoyarte en tus metas y no soltar tu mano jamás. ✨",
-            3: "No importa a dónde nos lleve el destino: mi lugar preferido siempre será a tu lado, Lu. 🌹"
-        };
-
-        function revealSecret(num) {
-            const display = document.getElementById('secretDisplay');
-            display.innerText = secrets[num];
-            display.classList.remove('hidden');
-        }
-
-        // Modal Regalito
-        const giftBox = document.getElementById('giftBox');
-        giftBox.addEventListener('click', () => {
-            const giftModal = document.getElementById('modalGift');
-            giftModal.classList.remove('opacity-0', 'pointer-events-none');
-            giftModal.querySelector('.glass-modal').classList.remove('scale-90');
-            giftModal.querySelector('.glass-modal').classList.add('scale-100');
-            triggerHearts();
-        });
-
-        function closeGiftModal() {
-            const giftModal = document.getElementById('modalGift');
-            giftModal.classList.add('opacity-0', 'pointer-events-none');
-            giftModal.querySelector('.glass-modal').classList.remove('scale-100');
-            giftModal.querySelector('.glass-modal').classList.add('scale-90');
-        }
-
-        // Modal Imagen Ampliada
-        function openImageModal(src, caption) {
-            const modal = document.getElementById('modalImage');
-            document.getElementById('modalImageTarget').src = src;
-            document.getElementById('modalImageCaption').innerText = caption;
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-        }
-
-        function closeImageModal() {
-            document.getElementById('modalImage').classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        // Modal Gestor
-        document.getElementById('btnOpenManager').addEventListener('click', () => {
-            document.getElementById('modalManager').classList.remove('opacity-0', 'pointer-events-none');
-        });
-
-        function closeManager() {
-            document.getElementById('modalManager').classList.add('opacity-0', 'pointer-events-none');
-        }
-
-
-        /* ===================================================================
-           6. ANIMACIONES DE CORAZONES Y DESTELLOS DE FONDO (CANVAS)
-           =================================================================== */
-        const heartsCanvas = document.getElementById('heartsCanvas');
-        const ctxHearts = heartsCanvas.getContext('2d');
-        let heartsArray = [];
-        let animationActive = false;
-
-        function resizeHeartsCanvas() {
-            heartsCanvas.width = window.innerWidth;
-            heartsCanvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeHeartsCanvas);
-        resizeHeartsCanvas();
-
-        class HeartParticle {
-            constructor() {
-                this.x = Math.random() * heartsCanvas.width;
-                this.y = heartsCanvas.height + Math.random() * 100;
-                this.size = Math.random() * 18 + 10;
-                this.speedY = Math.random() * 3 + 2;
-                this.speedX = (Math.random() - 0.5) * 2;
-                this.opacity = Math.random() * 0.7 + 0.3;
-                this.color = `hsl(${Math.random() * 40 + 330}, 100%, 65%)`;
-            }
-
-            update() {
-                this.y -= this.speedY;
-                this.x += this.speedX;
-                if (this.y < -50) {
-                    this.y = heartsCanvas.height + 20;
-                    this.x = Math.random() * heartsCanvas.width;
-                }
-            }
-
-            draw() {
-                ctxHearts.save();
-                ctxHearts.translate(this.x, this.y);
-                ctxHearts.globalAlpha = this.opacity;
-                ctxHearts.fillStyle = this.color;
-                ctxHearts.beginPath();
-                const topCurveHeight = this.size * 0.3;
-                ctxHearts.moveTo(0, topCurveHeight);
-                ctxHearts.bezierCurveTo(0, 0, -this.size / 2, 0, -this.size / 2, topCurveHeight);
-                ctxHearts.bezierCurveTo(-this.size / 2, (this.size + topCurveHeight) / 2, 0, this.size, 0, this.size);
-                ctxHearts.bezierCurveTo(0, this.size, this.size / 2, (this.size + topCurveHeight) / 2, this.size / 2, topCurveHeight);
-                ctxHearts.bezierCurveTo(this.size / 2, 0, 0, 0, 0, topCurveHeight);
-                ctxHearts.closePath();
-                ctxHearts.fill();
-                ctxHearts.restore();
-            }
-        }
-
-        function triggerHearts() {
-            heartsArray = [];
-            for (let i = 0; i < 70; i++) {
-                heartsArray.push(new HeartParticle());
-            }
-            animationActive = true;
-            animateHearts();
-        }
-
-        function animateHearts() {
-            if (!animationActive) return;
-            ctxHearts.clearRect(0, 0, heartsCanvas.width, heartsCanvas.height);
-            for (let i = 0; i < heartsArray.length; i++) {
-                heartsArray[i].update();
-                heartsArray[i].draw();
-            }
-            requestAnimationFrame(animateHearts);
-        }
-
-        // Destellos de Fondo
-        const bgCanvas = document.getElementById('bgCanvas');
-        const ctxBg = bgCanvas.getContext('2d');
-        let bgParticles = [];
-
-        function resizeBgCanvas() {
-            bgCanvas.width = window.innerWidth;
-            bgCanvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeBgCanvas);
-        resizeBgCanvas();
-
-        class Sparkle {
-            constructor() {
-                this.x = Math.random() * bgCanvas.width;
-                this.y = Math.random() * bgCanvas.height;
-                this.size = Math.random() * 2 + 0.5;
-                this.opacity = Math.random() * 0.8;
-                this.speedOpacity = (Math.random() * 0.015) + 0.005;
-                this.growing = Math.random() > 0.5;
-            }
-
-            update() {
-                if (this.growing) {
-                    this.opacity += this.speedOpacity;
-                    if (this.opacity >= 0.8) this.growing = false;
-                } else {
-                    this.opacity -= this.speedOpacity;
-                    if (this.opacity <= 0.1) {
-                        this.growing = true;
-                        this.x = Math.random() * bgCanvas.width;
-                        this.y = Math.random() * bgCanvas.height;
-                    }
-                }
-            }
-
-            draw() {
-                ctxBg.fillStyle = `rgba(254, 240, 138, ${this.opacity})`;
-                ctxBg.beginPath();
-                ctxBg.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctxBg.fill();
-            }
-        }
-
-        window.onload = function() {
-            bgParticles = [];
-            for (let i = 0; i < 50; i++) {
-                bgParticles.push(new Sparkle());
-            }
-            function animateBg() {
-                ctxBg.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
-                for (let particle of bgParticles) {
-                    particle.update();
-                    particle.draw();
-                }
-                requestAnimationFrame(animateBg);
-            }
-            animateBg();
-        };
-    </script>
-</body>
-</html>
+            <div class="glass-card-gold rounded-3xl p-6 sm:p-10
