@@ -335,4 +335,827 @@
 
         <!-- FRASES ESPECIALES -->
         <section class="w-full">
-            <div class="glass-card-gold rounded-3xl p-6 sm:p-10
+            <div class="glass-card-gold rounded-3xl p-6 sm:p-10 relative overflow-hidden text-center border-amber-400/30">
+                <i class="fas fa-quote-left text-amber-400/20 text-5xl absolute top-4 left-6"></i>
+                <i class="fas fa-quote-right text-amber-400/20 text-5xl absolute bottom-4 right-6"></i>
+
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Lo que siempre te digo</span>
+                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-amber-100 mt-1 mb-8">Nuestras Promesas</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                    <div class="p-6 bg-rose-950/40 rounded-2xl border border-amber-500/20 flex flex-col items-center justify-center space-y-3">
+                        <div class="w-12 h-12 rounded-full bg-amber-400/10 flex items-center justify-center text-amber-300 text-xl mb-1">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="font-cursive text-3xl sm:text-4xl text-amber-200">«Estaremos juntos hasta pasitas»</p>
+                        <p class="text-xs text-rose-200/70 font-light">Porque nuestro amor está hecho para durar toda la vida y envejecer uno al lado del otro, mi hermosa.</p>
+                    </div>
+
+                    <div class="p-6 bg-rose-950/40 rounded-2xl border border-amber-500/20 flex flex-col items-center justify-center space-y-3">
+                        <div class="w-12 h-12 rounded-full bg-amber-400/10 flex items-center justify-center text-amber-300 text-xl mb-1">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <p class="font-cursive text-3xl sm:text-4xl text-amber-200">«Adonde tú vayas, yo iré contigo»</p>
+                        <p class="text-xs text-rose-200/70 font-light">No importa la ciudad, el lugar ni el camino: mi lugar favorito en el mundo siempre será a tu lado, Lucero.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTADOR -->
+        <section class="w-full text-center">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 relative">
+                <span class="inline-block px-4 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest text-amber-300 bg-rose-950/60 border border-amber-500/30 mb-3">
+                    Desde el 17 de Octubre de 2026
+                </span>
+                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-amber-200 mb-1">
+                    Desde que decidimos volver a escribir nuestra historia
+                </h2>
+                <p class="text-xs sm:text-sm text-rose-200/70 mb-8 font-light">
+                    Cada segundo a tu lado, Lu, es un regalo que valoro con todo mi ser.
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                        <span id="timerYears" class="font-playfair text-2xl sm:text-4xl font-bold text-amber-300">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Años</span>
+                    </div>
+                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                        <span id="timerMonths" class="font-playfair text-2xl sm:text-4xl font-bold text-rose-200">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Meses</span>
+                    </div>
+                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                        <span id="timerDays" class="font-playfair text-2xl sm:text-4xl font-bold text-amber-300">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Días</span>
+                    </div>
+                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                        <span id="timerHours" class="font-playfair text-2xl sm:text-4xl font-bold text-rose-200">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Horas</span>
+                    </div>
+                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                        <span id="timerMinutes" class="font-playfair text-2xl sm:text-4xl font-bold text-rose-200">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Minutos</span>
+                    </div>
+                    <div class="bg-rose-950/50 border border-rose-500/20 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                        <span id="timerSeconds" class="font-playfair text-2xl sm:text-4xl font-bold text-amber-300 animate-pulse">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-rose-200/80 mt-1">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERÍA DE RECUERDOS -->
+        <section class="w-full">
+            <div class="text-center mb-8">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Nuestros Momentos</span>
+                <h2 class="font-playfair text-2xl sm:text-4xl font-bold text-rose-100 mt-1">Galería de Recuerdos</h2>
+                <p class="text-xs text-rose-200/70 mt-1">Toca cualquier fotografía para ampliarla</p>
+            </div>
+
+            <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+            </div>
+        </section>
+
+        <!-- FRASCO DE PROMESAS -->
+        <section class="w-full text-center">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col items-center">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Sorpresa Interactiva</span>
+                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-rose-100 mt-1 mb-4">Frasco de Promesas</h2>
+                <p class="text-xs text-rose-200/70 mb-6 font-light max-w-md">
+                    Presiona el frasco para sacar una nota especial con un pensamiento o una promesa seleccionada para ti, mi niña.
+                </p>
+
+                <button id="jarButton" onclick="drawJarNote()" class="w-24 h-32 sm:w-28 sm:h-36 bg-rose-950/60 rounded-3xl border-2 border-amber-300/50 shadow-2xl flex flex-col items-center justify-center relative hover:scale-105 active:scale-95 transition group">
+                    <div class="w-16 h-4 bg-amber-400/80 rounded-t-md mb-2 border border-amber-200"></div>
+                    <i class="fas fa-jar text-amber-300 text-4xl group-hover:rotate-6 transition"></i>
+                    <i class="fas fa-heart text-rose-500 text-xs absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pulse-glow"></i>
+                </button>
+
+                <div id="jarNoteDisplay" class="mt-6 hidden p-4 glass-card-gold rounded-2xl max-w-md w-full text-center border border-amber-400/40 animate-fade-in">
+                    <p id="jarNoteText" class="font-cursive text-2xl sm:text-3xl text-amber-200"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUESTRO FUTURO JUNTOS -->
+        <section class="w-full">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 relative overflow-hidden border-rose-400/20">
+                <div class="text-center mb-8">
+                    <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Mirando hacia adelante</span>
+                    <h2 class="font-playfair text-2xl sm:text-4xl font-bold text-amber-200 mt-1">Nuestro Futuro Juntos</h2>
+                    <p class="text-xs text-rose-200/80 mt-2 max-w-lg mx-auto font-light">
+                        No sabemos exactamente cuándo sucederá, Lucero, mi vida, pero tenemos la certeza absoluta del camino que queremos construir.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="p-5 bg-rose-950/40 rounded-2xl border border-rose-500/20 text-center space-y-2">
+                        <i class="fas fa-rings-wedding text-amber-300 text-2xl mb-1"></i>
+                        <h3 class="font-playfair font-semibold text-rose-100">Nuestro Sueño</h3>
+                        <p class="text-xs text-rose-200/70 font-light leading-relaxed">El deseo sincero de casarnos y celebrar nuestro amor rodeados de las personas que más queremos.</p>
+                    </div>
+
+                    <div class="p-5 bg-rose-950/40 rounded-2xl border border-rose-500/20 text-center space-y-2">
+                        <i class="fas fa-house-heart text-amber-300 text-2xl mb-1"></i>
+                        <h3 class="font-playfair font-semibold text-rose-100">Un Hogar Propio</h3>
+                        <p class="text-xs text-rose-200/70 font-light leading-relaxed">Construir nuestro espacio lleno de paz, risas, detalles y sueños compartidos día a día.</p>
+                    </div>
+
+                    <div class="p-5 bg-rose-950/40 rounded-2xl border border-rose-500/20 text-center space-y-2 sm:col-span-2 md:col-span-1">
+                        <i class="fas fa-hand-holding-heart text-amber-300 text-2xl mb-1"></i>
+                        <h3 class="font-playfair font-semibold text-rose-100">Caminar Juntos</h3>
+                        <p class="text-xs text-rose-200/70 font-light leading-relaxed">Acompañarnos en cada etapa, superar cualquier obstáculo y llegar a viejitos con las manos entrelazadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UNA CARTA PARA LU -->
+        <section class="w-full flex flex-col items-center">
+            <div class="text-center mb-8">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">De mi corazón al tuyo</span>
+                <h2 class="font-playfair text-2xl sm:text-4xl font-bold text-rose-100 mt-1">Una Carta Para Ti</h2>
+                <p class="text-xs text-rose-200/70 mt-1">Presiona el sobre para abrir la carta</p>
+            </div>
+
+            <div class="envelope-wrapper">
+                <div id="envelope" class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-pocket"></div>
+                    <div class="envelope-seal">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENSAJES SECRETOS -->
+        <section class="w-full text-center">
+            <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Detalles Interactivos</span>
+            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-rose-100 mt-1 mb-6">Mensajes Secretos</h2>
+            
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button onclick="revealSecret(1)" class="px-5 py-2.5 glass-card rounded-full text-xs font-medium text-rose-200 hover:text-amber-300 hover:scale-105 transition active:scale-95 border border-rose-500/20 flex items-center space-x-2">
+                    <i class="fas fa-heart text-rose-500"></i>
+                    <span>Toca aquí ❤️</span>
+                </button>
+
+                <button onclick="revealSecret(2)" class="px-5 py-2.5 glass-card rounded-full text-xs font-medium text-rose-200 hover:text-amber-300 hover:scale-105 transition active:scale-95 border border-rose-500/20 flex items-center space-x-2">
+                    <i class="fas fa-star text-amber-400"></i>
+                    <span>Un secreto ✨</span>
+                </button>
+
+                <button onclick="revealSecret(3)" class="px-5 py-2.5 glass-card rounded-full text-xs font-medium text-rose-200 hover:text-amber-300 hover:scale-105 transition active:scale-95 border border-rose-500/20 flex items-center space-x-2">
+                    <i class="fas fa-sparkles text-rose-400"></i>
+                    <span>Para Lucero 🌹</span>
+                </button>
+            </div>
+
+            <div id="secretDisplay" class="mt-6 hidden p-4 glass-card rounded-2xl max-w-md mx-auto text-sm text-amber-200 font-cursive text-xl animate-fade-in border border-amber-400/30">
+            </div>
+        </section>
+
+        <!-- SORPRESA -->
+        <section class="w-full text-center">
+            <div class="glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col items-center">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Especial para ti</span>
+                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-rose-100 mt-1 mb-6">Una Sorpresa Para Ti</h2>
+
+                <button id="giftBox" class="w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-tr from-rose-700 to-amber-500 rounded-2xl shadow-2xl flex items-center justify-center text-white text-4xl hover:scale-110 active:scale-95 transition duration-300 border-2 border-amber-300/40 animate-bounce relative group">
+                    <i class="fas fa-gift group-hover:rotate-12 transition"></i>
+                    <span class="absolute -bottom-7 text-[10px] text-amber-300 font-light tracking-wide whitespace-nowrap">Toca para abrir</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- FINAL -->
+        <section class="w-full text-center py-8">
+            <div class="glass-card-gold rounded-3xl p-8 sm:p-12 relative overflow-hidden border-amber-400/40">
+                <i class="fas fa-heart text-rose-500 text-4xl mb-4 pulse-glow"></i>
+                <p class="font-playfair text-lg sm:text-2xl md:text-3xl text-amber-100 font-semibold leading-relaxed max-w-2xl mx-auto">
+                    «No podemos cambiar lo que pasó, pero sí podemos decidir cómo continúa nuestra historia. Y si algo tengo claro, es que quiero seguir escribiéndola contigo, Lu, amor mío.»
+                </p>
+                <p class="font-cursive text-3xl text-amber-300 mt-6">
+                    Con todo mi amor, Joel ❤️
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-6 text-xs text-rose-300/50 font-light border-t border-rose-900/30">
+        Hecho con todo mi corazón por Joel para Lucero, mi cielo ✨
+    </footer>
+
+    <!-- MODALES -->
+
+    <!-- 1. Modal Carta -->
+    <div id="modalLetter" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeLetter()"></div>
+        <div class="glass-modal max-w-xl w-full rounded-3xl p-6 sm:p-10 relative z-10 transform scale-90 transition-all duration-500 max-h-[85vh] overflow-y-auto border border-amber-400/30">
+            <button onclick="closeLetter()" class="absolute top-4 right-4 text-rose-300 hover:text-amber-300 text-xl w-8 h-8 rounded-full bg-rose-950/60 flex items-center justify-center">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="font-cursive text-3xl text-amber-300">Mi querida Lucero,</span>
+            </div>
+            <div class="font-montserrat text-xs sm:text-sm text-rose-100/90 leading-relaxed space-y-4 text-justify font-light">
+                <p>
+                    Escribo estas palabras con la certeza de que el destino sabe reunir a quienes verdaderamente pertenecen juntos. Pasamos por una etapa a distancia que nos puso a prueba, y aunque después la vida nos llevó por caminos separados durante un tiempo, jamás dejaste de habitar en mi corazón.
+                </p>
+                <p>
+                    El 17 de octubre de 2026 marcó el inicio de nuestra oportunidad más bonita. Decidir retomar lo nuestro, mi cielo, no fue solo volver a intentar, sino elegirnos con más convicción, madurez y amor del que jamás hayamos sentido.
+                </p>
+                <p>
+                    Quiero recordarte dos certezas que llevo grabadas en el alma, Lucero: que <strong class="text-amber-200">estaremos juntos hasta pasitas</strong>, y que <strong class="text-amber-200">adonde tú vayas, yo iré contigo</strong>. No importa los retos que vengan, mi sueño es seguir construyendo nuestro futuro, casarnos algún día, formar un hogar y envejecer a tu lado.
+                </p>
+                <p class="text-right font-cursive text-2xl text-amber-300 pt-2">
+                    Tuyo por siempre, Joel ❤️
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Modal Foto Grande -->
+    <div id="modalImage" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeImageModal()"></div>
+        <div class="relative z-10 max-w-2xl w-full flex flex-col items-center">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white hover:text-amber-300 text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImageTarget" src="" alt="Ampliada" class="max-h-[75vh] rounded-2xl border-2 border-amber-300/40 shadow-2xl object-contain">
+            <p id="modalImageCaption" class="mt-4 text-center text-sm font-light text-amber-200 font-playfair"></p>
+        </div>
+    </div>
+
+    <!-- 3. Modal Regalo -->
+    <div id="modalGift" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeGiftModal()"></div>
+        <div class="glass-modal max-w-md w-full rounded-3xl p-8 text-center relative z-10 transform scale-90 transition-all duration-500 border-2 border-amber-400/40">
+            <div class="w-16 h-16 bg-gradient-to-tr from-rose-500 to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
+                <i class="fas fa-grin-hearts text-white text-3xl"></i>
+            </div>
+            <h3 class="font-playfair text-2xl font-bold text-amber-200 mb-2">¡Eres mi regalo favorito, amor mío!</h3>
+            <p class="font-montserrat text-xs text-rose-100 leading-relaxed mb-6 font-light">
+                Gracias por ser mi niña hermosa y llenar cada día de luz. Prometo cuidar tu corazón hoy, mañana y siempre.
+            </p>
+            <button onclick="closeGiftModal()" class="px-6 py-2.5 bg-gradient-to-r from-rose-600 to-amber-500 text-white font-semibold rounded-full text-xs shadow-md hover:scale-105 active:scale-95 transition">
+                Te Amo Lucero ❤️
+            </button>
+        </div>
+    </div>
+
+    <!-- 4. Modal Gestor -->
+    <div id="modalManager" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="closeManager()"></div>
+        <div class="glass-modal max-w-2xl w-full rounded-3xl p-6 relative z-10 max-h-[85vh] overflow-y-auto border border-amber-500/30">
+            <button onclick="closeManager()" class="absolute top-4 right-4 text-rose-300 hover:text-amber-300 text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h3 class="font-playfair text-xl font-bold text-amber-200 mb-1 flex items-center space-x-2">
+                <i class="fas fa-images"></i>
+                <span>Gestor de Fotos, Música y Respaldo</span>
+            </h3>
+            <p class="text-xs text-rose-200/70 mb-6 font-light">
+                Sube las fotos y canciones desde tu equipo. Se guardan localmente en IndexedDB.
+            </p>
+
+            <div class="mb-6 p-4 bg-rose-950/50 rounded-2xl border border-rose-500/20">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-2">Música de Fondo (.mp3)</h4>
+                <input type="file" id="inputAudio" accept="audio/*" class="block w-full text-xs text-rose-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rose-900 file:text-amber-200 hover:file:bg-rose-800 cursor-pointer">
+            </div>
+
+            <div class="mb-6 p-4 bg-rose-950/50 rounded-2xl border border-rose-500/20">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-2">Agregar Fotografías</h4>
+                <input type="file" id="inputPhotos" accept="image/*" multiple class="block w-full text-xs text-rose-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rose-900 file:text-amber-200 hover:file:bg-rose-800 cursor-pointer">
+                
+                <div id="managerPhotoList" class="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-4 max-h-60 overflow-y-auto p-1">
+                </div>
+            </div>
+
+            <div class="p-4 bg-rose-950/50 rounded-2xl border border-amber-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="text-left">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300">Respaldo Completo</h4>
+                    <p class="text-[11px] text-rose-200/70 font-light">Guarda o restaura un archivo JSON con tus fotos y música.</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="exportBackup()" class="px-3 py-1.5 bg-amber-500/20 border border-amber-400/40 text-amber-200 rounded-full text-xs hover:bg-amber-500/40 transition">Exportar</button>
+                    <label class="px-3 py-1.5 bg-rose-900/40 border border-rose-400/40 text-rose-200 rounded-full text-xs hover:bg-rose-900/60 transition cursor-pointer">
+                        Importar
+                        <input type="file" id="inputBackup" accept=".json" class="hidden" onchange="importBackup(event)">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const FECHA_RECONCILIACION = new Date('2026-10-17T00:00:00');
+
+        function actualizarContador() {
+            const ahora = new Date();
+            let diferencia = ahora - FECHA_RECONCILIACION;
+
+            if (diferencia < 0) {
+                document.getElementById('timerYears').innerText = "00";
+                document.getElementById('timerMonths').innerText = "00";
+                document.getElementById('timerDays').innerText = "00";
+                document.getElementById('timerHours').innerText = "00";
+                document.getElementById('timerMinutes').innerText = "00";
+                document.getElementById('timerSeconds').innerText = "00";
+                return;
+            }
+
+            let inicio = new Date(FECHA_RECONCILIACION);
+            let anios = ahora.getFullYear() - inicio.getFullYear();
+            let meses = ahora.getMonth() - inicio.getMonth();
+            let dias = ahora.getDate() - inicio.getDate();
+
+            if (dias < 0) {
+                meses--;
+                let ultimoDiaMesAnterior = new Date(ahora.getFullYear(), ahora.getMonth(), 0).getDate();
+                dias += ultimoDiaMesAnterior;
+            }
+            if (meses < 0) {
+                anios--;
+                meses += 12;
+            }
+
+            const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+            const segundos = Math.floor((diferencia / 1000) % 60);
+
+            document.getElementById('timerYears').innerText = String(anios).padStart(2, '0');
+            document.getElementById('timerMonths').innerText = String(meses).padStart(2, '0');
+            document.getElementById('timerDays').innerText = String(dias).padStart(2, '0');
+            document.getElementById('timerHours').innerText = String(horas).padStart(2, '0');
+            document.getElementById('timerMinutes').innerText = String(minutos).padStart(2, '0');
+            document.getElementById('timerSeconds').innerText = String(segundos).padStart(2, '0');
+        }
+
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
+
+        // INDEXEDDB
+        let db;
+        const request = indexedDB.open("MiHistoriaConLuceroDB", 1);
+
+        request.onupgradeneeded = function(e) {
+            db = e.target.result;
+            if (!db.objectStoreNames.contains("photos")) {
+                db.createObjectStore("photos", { keyPath: "id", autoIncrement: true });
+            }
+            if (!db.objectStoreNames.contains("music")) {
+                db.createObjectStore("music", { keyPath: "id" });
+            }
+        };
+
+        request.onsuccess = function(e) {
+            db = e.target.result;
+            cargarFotosDesdeDB();
+            cargarMusicaDesdeDB();
+        };
+
+        document.getElementById('inputAudio').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const tx = db.transaction("music", "readwrite");
+                const store = tx.objectStore("music");
+                store.put({ id: "bgMusic", data: evt.target.result, name: file.name });
+                tx.oncomplete = cargarMusicaDesdeDB;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        function cargarMusicaDesdeDB() {
+            if (!db) return;
+            const tx = db.transaction("music", "readonly");
+            const store = tx.objectStore("music");
+            const req = store.get("bgMusic");
+
+            req.onsuccess = function() {
+                if (req.result) {
+                    const audioEl = document.getElementById('bgAudio');
+                    audioEl.src = req.result.data;
+                    document.getElementById('musicTitle').innerText = req.result.name || "Nuestra Canción";
+                }
+            };
+        }
+
+        document.getElementById('inputPhotos').addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (!files.length) return;
+
+            Array.from(files).forEach((file) => {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    const tx = db.transaction("photos", "readwrite");
+                    const store = tx.objectStore("photos");
+                    store.add({ 
+                        data: evt.target.result, 
+                        isMain: false,
+                        caption: `Recuerdo con Lucero • ${new Date().toLocaleDateString()}` 
+                    });
+                    tx.oncomplete = cargarFotosDesdeDB;
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+
+        function cargarFotosDesdeDB() {
+            if (!db) return;
+            const tx = db.transaction("photos", "readonly");
+            const store = tx.objectStore("photos");
+            const req = store.getAll();
+
+            req.onsuccess = function() {
+                const photos = req.result;
+                const galleryGrid = document.getElementById('galleryGrid');
+                const managerPhotoList = document.getElementById('managerPhotoList');
+                
+                galleryGrid.innerHTML = '';
+                managerPhotoList.innerHTML = '';
+
+                if (photos.length === 0) {
+                    galleryGrid.innerHTML = `
+                        <div class="col-span-full text-center py-8 text-xs text-rose-200/50 font-light">
+                            Aún no has agregado fotos. Toca "Gestionar Fotos, Música y Respaldo" para subir tus recuerdos.
+                        </div>
+                    `;
+                    return;
+                }
+
+                let mainFound = false;
+                photos.forEach((photo) => {
+                    if (photo.isMain) {
+                        document.getElementById('mainAvatar').src = photo.data;
+                        mainFound = true;
+                    }
+
+                    const card = document.createElement('div');
+                    card.className = "group relative aspect-square rounded-2xl overflow-hidden glass-card cursor-pointer border border-rose-500/20 hover:border-amber-400/50 transition duration-300";
+                    card.onclick = () => openImageModal(photo.data, photo.caption);
+                    card.innerHTML = `
+                        <img src="${photo.data}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Recuerdo de Joel y Lucero">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                            <span class="text-[11px] text-amber-200 font-medium truncate">${photo.caption}</span>
+                        </div>
+                    `;
+                    galleryGrid.appendChild(card);
+
+                    const managerCard = document.createElement('div');
+                    managerCard.className = "relative aspect-square rounded-lg overflow-hidden border border-rose-500/30 group";
+                    managerCard.innerHTML = `
+                        <img src="${photo.data}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center space-x-2">
+                            <button onclick="setMainPhoto(${photo.id})" title="Foto Principal" class="text-amber-300 hover:text-amber-100 text-xs p-1">
+                                <i class="fas fa-star ${photo.isMain ? 'text-amber-400' : ''}"></i>
+                            </button>
+                            <button onclick="deletePhoto(${photo.id})" title="Eliminar" class="text-rose-400 hover:text-rose-200 text-xs p-1">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    `;
+                    managerPhotoList.appendChild(managerCard);
+                });
+
+                if (!mainFound && photos.length > 0) {
+                    setMainPhoto(photos[0].id);
+                }
+            };
+        }
+
+        function setMainPhoto(id) {
+            const tx = db.transaction("photos", "readwrite");
+            const store = tx.objectStore("photos");
+            store.getAll().onsuccess = function(e) {
+                const photos = e.target.result;
+                photos.forEach(p => {
+                    p.isMain = (p.id === id);
+                    store.put(p);
+                });
+                tx.oncomplete = cargarFotosDesdeDB;
+            };
+        }
+
+        function deletePhoto(id) {
+            const tx = db.transaction("photos", "readwrite");
+            const store = tx.objectStore("photos");
+            store.delete(id);
+            tx.oncomplete = cargarFotosDesdeDB;
+        }
+
+        // RESPALDOS JSON
+        function exportBackup() {
+            if (!db) return;
+            const txP = db.transaction("photos", "readonly").objectStore("photos").getAll();
+            const txM = db.transaction("music", "readonly").objectStore("music").getAll();
+
+            Promise.all([
+                new Promise(res => txP.onsuccess = () => res(txP.result)),
+                new Promise(res => txM.onsuccess = () => res(txM.result))
+            ]).then(([photos, music]) => {
+                const data = JSON.stringify({ photos, music });
+                const blob = new Blob([data], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "respaldo_historia_joel_y_lucero.json";
+                a.click();
+            });
+        }
+
+        function importBackup(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const backup = JSON.parse(evt.target.result);
+                    if (backup.photos && backup.music) {
+                        const txP = db.transaction("photos", "readwrite");
+                        const storeP = txP.objectStore("photos");
+                        storeP.clear();
+                        backup.photos.forEach(p => storeP.add(p));
+
+                        const txM = db.transaction("music", "readwrite");
+                        const storeM = txM.objectStore("music");
+                        storeM.clear();
+                        backup.music.forEach(m => storeM.add(m));
+
+                        setTimeout(() => {
+                            cargarFotosDesdeDB();
+                            cargarMusicaDesdeDB();
+                            alert("¡Respaldo restaurado con éxito!");
+                        }, 500);
+                    }
+                } catch(err) {
+                    alert("El archivo de respaldo no es válido.");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // REPRODUCTOR MÚSICA
+        const bgAudio = document.getElementById('bgAudio');
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const eqContainer = document.getElementById('eqContainer');
+
+        musicToggle.addEventListener('click', () => {
+            if (!bgAudio.src) {
+                alert("Primero sube un archivo MP3 tocando en 'Gestionar Fotos, Música y Respaldo'.");
+                return;
+            }
+            if (bgAudio.paused) {
+                bgAudio.play();
+                musicIcon.className = "fas fa-pause text-xs";
+                eqContainer.classList.remove('hidden');
+            } else {
+                bgAudio.pause();
+                musicIcon.className = "fas fa-play text-xs ml-0.5";
+                eqContainer.classList.add('hidden');
+            }
+        });
+
+        volumeSlider.addEventListener('input', (e) => {
+            bgAudio.volume = e.target.value;
+        });
+
+        // FRASCO DE PROMESAS
+        const jarNotes = [
+            "Estaremos juntos hasta pasitas, mi hermosa. 🍇",
+            "Adonde tú vayas, yo iré contigo, Lucero. 🧭",
+            "Eres el amor de mi vida y mi mayor bendición. ❤️",
+            "Gracias por elegirnos nuevamente este 17 de octubre. ✨",
+            "Mi sueño es construir un hogar y casarnos a tu lado. 💍",
+            "Tu sonrisa ilumina todos mis días, mi niña. 🌹",
+            "No hay distancia ni tiempo que apague lo que siento por ti. 💖"
+        ];
+
+        function drawJarNote() {
+            const display = document.getElementById('jarNoteDisplay');
+            const text = document.getElementById('jarNoteText');
+            const randomNote = jarNotes[Math.floor(Math.random() * jarNotes.length)];
+            text.innerText = `«${randomNote}»`;
+            display.classList.remove('hidden');
+        }
+
+        // SOBRE Y CARTA
+        const envelope = document.getElementById('envelope');
+        envelope.addEventListener('click', () => {
+            envelope.classList.add('open');
+            setTimeout(() => {
+                const letterModal = document.getElementById('modalLetter');
+                letterModal.classList.remove('opacity-0', 'pointer-events-none');
+                letterModal.querySelector('.glass-modal').classList.remove('scale-90');
+                letterModal.querySelector('.glass-modal').classList.add('scale-100');
+            }, 600);
+        });
+
+        function closeLetter() {
+            const letterModal = document.getElementById('modalLetter');
+            letterModal.classList.add('opacity-0', 'pointer-events-none');
+            letterModal.querySelector('.glass-modal').classList.remove('scale-100');
+            letterModal.querySelector('.glass-modal').classList.add('scale-90');
+            setTimeout(() => envelope.classList.remove('open'), 300);
+        }
+
+        // MENSAJES SECRETOS Y REGALO
+        const secrets = {
+            1: "Eres la razón por la que sonrío al despertar cada mañana. ❤️",
+            2: "Prometo cuidar de ti y de nuestros sueños con toda mi alma, mi cielo. ✨",
+            3: "Adonde tú vayas, yo iré contigo, Lucero de mi vida. 🌹"
+        };
+
+        function revealSecret(num) {
+            const display = document.getElementById('secretDisplay');
+            display.innerText = secrets[num];
+            display.classList.remove('hidden');
+        }
+
+        const giftBox = document.getElementById('giftBox');
+        giftBox.addEventListener('click', () => {
+            const giftModal = document.getElementById('modalGift');
+            giftModal.classList.remove('opacity-0', 'pointer-events-none');
+            giftModal.querySelector('.glass-modal').classList.remove('scale-90');
+            giftModal.querySelector('.glass-modal').classList.add('scale-100');
+            triggerHearts();
+        });
+
+        function closeGiftModal() {
+            const giftModal = document.getElementById('modalGift');
+            giftModal.classList.add('opacity-0', 'pointer-events-none');
+            giftModal.querySelector('.glass-modal').classList.remove('scale-100');
+            giftModal.querySelector('.glass-modal').classList.add('scale-90');
+        }
+
+        function openImageModal(src, caption) {
+            const modal = document.getElementById('modalImage');
+            document.getElementById('modalImageTarget').src = src;
+            document.getElementById('modalImageCaption').innerText = caption;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeImageModal() {
+            document.getElementById('modalImage').classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        document.getElementById('btnOpenManager').addEventListener('click', () => {
+            document.getElementById('modalManager').classList.remove('opacity-0', 'pointer-events-none');
+        });
+
+        function closeManager() {
+            document.getElementById('modalManager').classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // ESCAPE KEY TO CLOSE MODALS
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLetter();
+                closeGiftModal();
+                closeImageModal();
+                closeManager();
+            }
+        });
+
+        // ANIMACIONES CANVAS
+        const heartsCanvas = document.getElementById('heartsCanvas');
+        const ctxHearts = heartsCanvas.getContext('2d');
+        let heartsArray = [];
+        let animationActive = false;
+
+        function resizeHeartsCanvas() {
+            heartsCanvas.width = window.innerWidth;
+            heartsCanvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeHeartsCanvas);
+        resizeHeartsCanvas();
+
+        class HeartParticle {
+            constructor() {
+                this.x = Math.random() * heartsCanvas.width;
+                this.y = heartsCanvas.height + Math.random() * 100;
+                this.size = Math.random() * 18 + 10;
+                this.speedY = Math.random() * 3 + 2;
+                this.speedX = (Math.random() - 0.5) * 2;
+                this.opacity = Math.random() * 0.7 + 0.3;
+                this.color = `hsl(${Math.random() * 40 + 330}, 100%, 65%)`;
+            }
+
+            update() {
+                this.y -= this.speedY;
+                this.x += this.speedX;
+                if (this.y < -50) {
+                    this.y = heartsCanvas.height + 20;
+                    this.x = Math.random() * heartsCanvas.width;
+                }
+            }
+
+            draw() {
+                ctxHearts.save();
+                ctxHearts.translate(this.x, this.y);
+                ctxHearts.globalAlpha = this.opacity;
+                ctxHearts.fillStyle = this.color;
+                ctxHearts.beginPath();
+                const topCurveHeight = this.size * 0.3;
+                ctxHearts.moveTo(0, topCurveHeight);
+                ctxHearts.bezierCurveTo(0, 0, -this.size / 2, 0, -this.size / 2, topCurveHeight);
+                ctxHearts.bezierCurveTo(-this.size / 2, (this.size + topCurveHeight) / 2, 0, this.size, 0, this.size);
+                ctxHearts.bezierCurveTo(0, this.size, this.size / 2, (this.size + topCurveHeight) / 2, this.size / 2, topCurveHeight);
+                ctxHearts.bezierCurveTo(this.size / 2, 0, 0, 0, 0, topCurveHeight);
+                ctxHearts.closePath();
+                ctxHearts.fill();
+                ctxHearts.restore();
+            }
+        }
+
+        function triggerHearts() {
+            heartsArray = [];
+            for (let i = 0; i < 70; i++) {
+                heartsArray.push(new HeartParticle());
+            }
+            animationActive = true;
+            animateHearts();
+        }
+
+        function animateHearts() {
+            if (!animationActive) return;
+            ctxHearts.clearRect(0, 0, heartsCanvas.width, heartsCanvas.height);
+            for (let i = 0; i < heartsArray.length; i++) {
+                heartsArray[i].update();
+                heartsArray[i].draw();
+            }
+            requestAnimationFrame(animateHearts);
+        }
+
+        // DESTELLOS DE FONDO
+        const bgCanvas = document.getElementById('bgCanvas');
+        const ctxBg = bgCanvas.getContext('2d');
+        let bgParticles = [];
+
+        function resizeBgCanvas() {
+            bgCanvas.width = window.innerWidth;
+            bgCanvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeBgCanvas);
+        resizeBgCanvas();
+
+        class Sparkle {
+            constructor() {
+                this.x = Math.random() * bgCanvas.width;
+                this.y = Math.random() * bgCanvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.opacity = Math.random() * 0.8;
+                this.speedOpacity = (Math.random() * 0.015) + 0.005;
+                this.growing = Math.random() > 0.5;
+            }
+
+            update() {
+                if (this.growing) {
+                    this.opacity += this.speedOpacity;
+                    if (this.opacity >= 0.8) this.growing = false;
+                } else {
+                    this.opacity -= this.speedOpacity;
+                    if (this.opacity <= 0.1) {
+                        this.growing = true;
+                        this.x = Math.random() * bgCanvas.width;
+                        this.y = Math.random() * bgCanvas.height;
+                    }
+                }
+            }
+
+            draw() {
+                ctxBg.fillStyle = `rgba(254, 240, 138, ${this.opacity})`;
+                ctxBg.beginPath();
+                ctxBg.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctxBg.fill();
+            }
+        }
+
+        window.onload = function() {
+            bgParticles = [];
+            for (let i = 0; i < 50; i++) {
+                bgParticles.push(new Sparkle());
+            }
+            function animateBg() {
+                ctxBg.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+                for (let particle of bgParticles) {
+                    particle.update();
+                    particle.draw();
+                }
+                requestAnimationFrame(animateBg);
+            }
+            animateBg();
+        };
+    </script>
+</body>
+</html>
