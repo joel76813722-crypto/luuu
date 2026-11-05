@@ -242,8 +242,8 @@
                     <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="0.8" class="w-16 sm:w-20 h-1 bg-rose-950 rounded-lg appearance-none cursor-pointer accent-amber-400">
                 </div>
             </div>
-            <!-- CANCIÓN DESDE INTERNET -->
-            <audio id="bgAudio" loop preload="auto"></audio>
+            <!-- ARCHIVO DE MÚSICA LOCAL -->
+            <audio id="bgAudio" src="musica.mp3" loop preload="auto"></audio>
         </div>
     </header>
 
@@ -257,7 +257,7 @@
                 
                 <div class="relative w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-amber-200/50 glow-avatar bg-rose-950">
                     <img id="mainAvatar" 
-                         src="" 
+                         src="foto1.jpg" 
                          alt="Foto Principal de Joel y Lucero" 
                          class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out"
                     />
@@ -636,49 +636,17 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT CON ENLACES DIRECTOS DE INTERNET -->
+    <!-- JAVASCRIPT CON RUTAS LOCALES DIRECTAS -->
     <script>
-        // ==========================================================
-        // 1. CONFIGURA AQUÍ EL ENLACE DIRECTO DE TU MÚSICA (.mp3)
-        // ==========================================================
-        const CANCION_URL = "URL_DE_TU_CANCION_AQUI.mp3"; 
-        const CANCION_TITULO = "Nuestra Canción Especial - Joel & Lucero";
-
-        // ==========================================================
-        // 2. CONFIGURA AQUÍ LOS ENLACES DIRECTOS DE TUS FOTOS (.jpg / .png)
-        // ==========================================================
-        const FOTO_PORTADA_URL = "URL_DE_TU_FOTO_PRINCIPAL.jpg";
-
+        // CONFIGURACIÓN DE FOTOS LOCALES
         const GALERIA_FOTOS = [
-            {
-                url: "URL_DE_FOTO_1.jpg",
-                caption: "Nuestras caminatas en el Colegio Ramiro Villaverde • 2021"
-            },
-            {
-                url: "URL_DE_FOTO_2.jpg",
-                caption: "Momentos inolvidables a tu lado, mi hermosa ✨"
-            },
-            {
-                url: "URL_DE_FOTO_3.jpg",
-                caption: "Nuestro nuevo comienzo • 17 de Octubre de 2026 ❤️"
-            },
-            {
-                url: "URL_DE_FOTO_4.jpg",
-                caption: "Estaremos juntos hasta pasitas 🍇"
-            },
-            {
-                url: "URL_DE_FOTO_5.jpg",
-                caption: "Adonde tú vayas, yo iré contigo 🧭"
-            },
-            {
-                url: "URL_DE_FOTO_6.jpg",
-                caption: "Construyendo nuestro futuro juntos 💍"
-            }
+            { url: "foto2.jpg", caption: "Nuestras caminatas en el Colegio Ramiro Villaverde • 2021" },
+            { url: "foto3.jpg", caption: "Nuestra historia que volvió a encontrarse ❤️" },
+            { url: "foto4.jpg", caption: "Estaremos juntos hasta pasitas 🍇" },
+            { url: "foto5.jpg", caption: "Adonde tú vayas, yo iré contigo 🧭" }
         ];
 
-        // ==========================================================
         // CÁLCULO DEL CONTADOR (17 DE OCTUBRE DE 2026)
-        // ==========================================================
         const FECHA_RECONCILIACION = new Date('2026-10-17T00:00:00');
 
         function actualizarContador() {
@@ -725,12 +693,8 @@
         setInterval(actualizarContador, 1000);
         actualizarContador();
 
-        // INICIALIZACIÓN DE FOTOS Y MÚSICA
-        function cargarFotosYMusica() {
-            // Portada
-            document.getElementById('mainAvatar').src = FOTO_PORTADA_URL;
-
-            // Galería
+        // INICIALIZACIÓN DE GALERÍA DE FOTOS
+        function cargarFotos() {
             const galleryGrid = document.getElementById('galleryGrid');
             galleryGrid.innerHTML = '';
 
@@ -746,11 +710,6 @@
                 `;
                 galleryGrid.appendChild(card);
             });
-
-            // Música
-            const audioEl = document.getElementById('bgAudio');
-            audioEl.src = CANCION_URL;
-            document.getElementById('musicTitle').innerText = CANCION_TITULO;
         }
 
         // REPRODUCTOR MÚSICA
@@ -766,7 +725,7 @@
                     musicIcon.className = "fas fa-pause text-xs";
                     eqContainer.classList.remove('hidden');
                 }).catch(err => {
-                    alert("Asegúrate de colocar un enlace de música válido en el código.");
+                    alert("Asegúrate de tener la canción 'musica.mp3' guardada en la misma carpeta que este archivo.");
                 });
             } else {
                 bgAudio.pause();
@@ -858,7 +817,7 @@
             document.getElementById('modalImage').classList.add('opacity-0', 'pointer-events-none');
         }
 
-        // ESCAPE KEY TO CLOSE MODALS
+        // TECLA ESCAPE PARA CERRAR VENTANAS
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeLetter();
@@ -982,7 +941,7 @@
         }
 
         window.onload = function() {
-            cargarFotosYMusica();
+            cargarFotos();
 
             bgParticles = [];
             for (let i = 0; i < 50; i++) {
