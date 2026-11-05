@@ -225,21 +225,13 @@
     <canvas id="bgCanvas"></canvas>
     <canvas id="heartsCanvas"></canvas>
 
-    <!-- Barra de Control Flotante -->
-    <header class="fixed top-4 left-0 right-0 z-50 px-4 max-w-4xl mx-auto flex items-center justify-between pointer-events-none">
-        
-        <div class="pointer-events-auto flex items-center space-x-2">
-            <button id="btnOpenManager" class="glass-card px-4 py-2 rounded-full text-xs font-semibold text-amber-300 hover:text-amber-100 flex items-center space-x-2 transition hover:scale-105 active:scale-95 border border-amber-500/30">
-                <i class="fas fa-sliders text-sm"></i>
-                <span class="hidden sm:inline">Gestionar Fotos, Música y Respaldo</span>
-            </button>
-        </div>
-
+    <!-- Barra de Control Flotante para Música -->
+    <header class="fixed top-4 left-0 right-0 z-50 px-4 max-w-4xl mx-auto flex items-center justify-end pointer-events-none">
         <div class="pointer-events-auto glass-card rounded-full p-2 pr-4 flex items-center space-x-3 shadow-2xl border border-rose-500/30">
             <button id="musicToggle" class="w-10 h-10 rounded-full bg-gradient-to-r from-rose-600 to-amber-500 flex items-center justify-center text-white hover:scale-110 active:scale-95 transition shadow-lg">
                 <i id="musicIcon" class="fas fa-play text-xs ml-0.5"></i>
             </button>
-            <div class="flex flex-col min-w-[90px] max-w-[130px] sm:max-w-[180px]">
+            <div class="flex flex-col min-w-[100px] max-w-[140px] sm:max-w-[200px]">
                 <span id="musicTitle" class="text-[11px] font-medium text-amber-200 truncate">Mi canción para Lucero</span>
                 <div class="flex items-center space-x-1 mt-0.5">
                     <div id="eqContainer" class="hidden flex items-center space-x-0.5 mr-1">
@@ -250,7 +242,8 @@
                     <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="0.8" class="w-16 sm:w-20 h-1 bg-rose-950 rounded-lg appearance-none cursor-pointer accent-amber-400">
                 </div>
             </div>
-            <audio id="bgAudio" loop></audio>
+            <!-- CANCIÓN DESDE INTERNET -->
+            <audio id="bgAudio" loop preload="auto"></audio>
         </div>
     </header>
 
@@ -264,8 +257,8 @@
                 
                 <div class="relative w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-amber-200/50 glow-avatar bg-rose-950">
                     <img id="mainAvatar" 
-                         src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%232b0813'/%3E%3Cpath d='M150 210s-60-38-80-70c-18-28-5-65 25-72 23-5 43 8 55 24 12-16 32-29 55-24 30 7 43 44 25 72-20 32-80 70-80 70z' fill='%23be123c'/%3E%3Ctext x='150' y='250' font-family='sans-serif' font-size='14' fill='%23fef08a' text-anchor='middle'%3ENuestra Foto Especial%3C/text%3E%3C/svg%3E" 
-                         alt="Foto de Joel y Lucero" 
+                         src="" 
+                         alt="Foto Principal de Joel y Lucero" 
                          class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out"
                     />
                 </div>
@@ -399,7 +392,7 @@
             </div>
         </section>
 
-        <!-- CONTADOR -->
+        <!-- CONTADOR DESDE EL 17 DE OCTUBRE DE 2026 -->
         <section class="w-full text-center">
             <div class="glass-card rounded-3xl p-6 sm:p-10 relative">
                 <span class="inline-block px-4 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest text-amber-300 bg-rose-950/60 border border-amber-500/30 mb-3">
@@ -643,53 +636,49 @@
         </div>
     </div>
 
-    <!-- 4. Modal Gestor -->
-    <div id="modalManager" class="fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none transition-all duration-300">
-        <div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="closeManager()"></div>
-        <div class="glass-modal max-w-2xl w-full rounded-3xl p-6 relative z-10 max-h-[85vh] overflow-y-auto border border-amber-500/30">
-            <button onclick="closeManager()" class="absolute top-4 right-4 text-rose-300 hover:text-amber-300 text-xl">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <h3 class="font-playfair text-xl font-bold text-amber-200 mb-1 flex items-center space-x-2">
-                <i class="fas fa-images"></i>
-                <span>Gestor de Fotos, Música y Respaldo</span>
-            </h3>
-            <p class="text-xs text-rose-200/70 mb-6 font-light">
-                Sube las fotos y canciones desde tu equipo. Se guardan localmente en IndexedDB.
-            </p>
-
-            <div class="mb-6 p-4 bg-rose-950/50 rounded-2xl border border-rose-500/20">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-2">Música de Fondo (.mp3)</h4>
-                <input type="file" id="inputAudio" accept="audio/*" class="block w-full text-xs text-rose-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rose-900 file:text-amber-200 hover:file:bg-rose-800 cursor-pointer">
-            </div>
-
-            <div class="mb-6 p-4 bg-rose-950/50 rounded-2xl border border-rose-500/20">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-2">Agregar Fotografías</h4>
-                <input type="file" id="inputPhotos" accept="image/*" multiple class="block w-full text-xs text-rose-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rose-900 file:text-amber-200 hover:file:bg-rose-800 cursor-pointer">
-                
-                <div id="managerPhotoList" class="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-4 max-h-60 overflow-y-auto p-1">
-                </div>
-            </div>
-
-            <div class="p-4 bg-rose-950/50 rounded-2xl border border-amber-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div class="text-left">
-                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-300">Respaldo Completo</h4>
-                    <p class="text-[11px] text-rose-200/70 font-light">Guarda o restaura un archivo JSON con tus fotos y música.</p>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <button onclick="exportBackup()" class="px-3 py-1.5 bg-amber-500/20 border border-amber-400/40 text-amber-200 rounded-full text-xs hover:bg-amber-500/40 transition">Exportar</button>
-                    <label class="px-3 py-1.5 bg-rose-900/40 border border-rose-400/40 text-rose-200 rounded-full text-xs hover:bg-rose-900/60 transition cursor-pointer">
-                        Importar
-                        <input type="file" id="inputBackup" accept=".json" class="hidden" onchange="importBackup(event)">
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT CON ENLACES DIRECTOS DE INTERNET -->
     <script>
+        // ==========================================================
+        // 1. CONFIGURA AQUÍ EL ENLACE DIRECTO DE TU MÚSICA (.mp3)
+        // ==========================================================
+        const CANCION_URL = "URL_DE_TU_CANCION_AQUI.mp3"; 
+        const CANCION_TITULO = "Nuestra Canción Especial - Joel & Lucero";
+
+        // ==========================================================
+        // 2. CONFIGURA AQUÍ LOS ENLACES DIRECTOS DE TUS FOTOS (.jpg / .png)
+        // ==========================================================
+        const FOTO_PORTADA_URL = "URL_DE_TU_FOTO_PRINCIPAL.jpg";
+
+        const GALERIA_FOTOS = [
+            {
+                url: "URL_DE_FOTO_1.jpg",
+                caption: "Nuestras caminatas en el Colegio Ramiro Villaverde • 2021"
+            },
+            {
+                url: "URL_DE_FOTO_2.jpg",
+                caption: "Momentos inolvidables a tu lado, mi hermosa ✨"
+            },
+            {
+                url: "URL_DE_FOTO_3.jpg",
+                caption: "Nuestro nuevo comienzo • 17 de Octubre de 2026 ❤️"
+            },
+            {
+                url: "URL_DE_FOTO_4.jpg",
+                caption: "Estaremos juntos hasta pasitas 🍇"
+            },
+            {
+                url: "URL_DE_FOTO_5.jpg",
+                caption: "Adonde tú vayas, yo iré contigo 🧭"
+            },
+            {
+                url: "URL_DE_FOTO_6.jpg",
+                caption: "Construyendo nuestro futuro juntos 💍"
+            }
+        ];
+
+        // ==========================================================
+        // CÁLCULO DEL CONTADOR (17 DE OCTUBRE DE 2026)
+        // ==========================================================
         const FECHA_RECONCILIACION = new Date('2026-10-17T00:00:00');
 
         function actualizarContador() {
@@ -736,208 +725,32 @@
         setInterval(actualizarContador, 1000);
         actualizarContador();
 
-        // INDEXEDDB
-        let db;
-        const request = indexedDB.open("MiHistoriaConLuceroDB", 1);
+        // INICIALIZACIÓN DE FOTOS Y MÚSICA
+        function cargarFotosYMusica() {
+            // Portada
+            document.getElementById('mainAvatar').src = FOTO_PORTADA_URL;
 
-        request.onupgradeneeded = function(e) {
-            db = e.target.result;
-            if (!db.objectStoreNames.contains("photos")) {
-                db.createObjectStore("photos", { keyPath: "id", autoIncrement: true });
-            }
-            if (!db.objectStoreNames.contains("music")) {
-                db.createObjectStore("music", { keyPath: "id" });
-            }
-        };
+            // Galería
+            const galleryGrid = document.getElementById('galleryGrid');
+            galleryGrid.innerHTML = '';
 
-        request.onsuccess = function(e) {
-            db = e.target.result;
-            cargarFotosDesdeDB();
-            cargarMusicaDesdeDB();
-        };
-
-        document.getElementById('inputAudio').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(evt) {
-                const tx = db.transaction("music", "readwrite");
-                const store = tx.objectStore("music");
-                store.put({ id: "bgMusic", data: evt.target.result, name: file.name });
-                tx.oncomplete = cargarMusicaDesdeDB;
-            };
-            reader.readAsDataURL(file);
-        });
-
-        function cargarMusicaDesdeDB() {
-            if (!db) return;
-            const tx = db.transaction("music", "readonly");
-            const store = tx.objectStore("music");
-            const req = store.get("bgMusic");
-
-            req.onsuccess = function() {
-                if (req.result) {
-                    const audioEl = document.getElementById('bgAudio');
-                    audioEl.src = req.result.data;
-                    document.getElementById('musicTitle').innerText = req.result.name || "Nuestra Canción";
-                }
-            };
-        }
-
-        document.getElementById('inputPhotos').addEventListener('change', function(e) {
-            const files = e.target.files;
-            if (!files.length) return;
-
-            Array.from(files).forEach((file) => {
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    const tx = db.transaction("photos", "readwrite");
-                    const store = tx.objectStore("photos");
-                    store.add({ 
-                        data: evt.target.result, 
-                        isMain: false,
-                        caption: `Recuerdo con Lucero • ${new Date().toLocaleDateString()}` 
-                    });
-                    tx.oncomplete = cargarFotosDesdeDB;
-                };
-                reader.readAsDataURL(file);
+            GALERIA_FOTOS.forEach((photo) => {
+                const card = document.createElement('div');
+                card.className = "group relative aspect-square rounded-2xl overflow-hidden glass-card cursor-pointer border border-rose-500/20 hover:border-amber-400/50 transition duration-300";
+                card.onclick = () => openImageModal(photo.url, photo.caption);
+                card.innerHTML = `
+                    <img src="${photo.url}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Recuerdo de Joel y Lucero">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-[11px] text-amber-200 font-medium truncate">${photo.caption}</span>
+                    </div>
+                `;
+                galleryGrid.appendChild(card);
             });
-        });
 
-        function cargarFotosDesdeDB() {
-            if (!db) return;
-            const tx = db.transaction("photos", "readonly");
-            const store = tx.objectStore("photos");
-            const req = store.getAll();
-
-            req.onsuccess = function() {
-                const photos = req.result;
-                const galleryGrid = document.getElementById('galleryGrid');
-                const managerPhotoList = document.getElementById('managerPhotoList');
-                
-                galleryGrid.innerHTML = '';
-                managerPhotoList.innerHTML = '';
-
-                if (photos.length === 0) {
-                    galleryGrid.innerHTML = `
-                        <div class="col-span-full text-center py-8 text-xs text-rose-200/50 font-light">
-                            Aún no has agregado fotos. Toca "Gestionar Fotos, Música y Respaldo" para subir tus recuerdos.
-                        </div>
-                    `;
-                    return;
-                }
-
-                let mainFound = false;
-                photos.forEach((photo) => {
-                    if (photo.isMain) {
-                        document.getElementById('mainAvatar').src = photo.data;
-                        mainFound = true;
-                    }
-
-                    const card = document.createElement('div');
-                    card.className = "group relative aspect-square rounded-2xl overflow-hidden glass-card cursor-pointer border border-rose-500/20 hover:border-amber-400/50 transition duration-300";
-                    card.onclick = () => openImageModal(photo.data, photo.caption);
-                    card.innerHTML = `
-                        <img src="${photo.data}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Recuerdo de Joel y Lucero">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                            <span class="text-[11px] text-amber-200 font-medium truncate">${photo.caption}</span>
-                        </div>
-                    `;
-                    galleryGrid.appendChild(card);
-
-                    const managerCard = document.createElement('div');
-                    managerCard.className = "relative aspect-square rounded-lg overflow-hidden border border-rose-500/30 group";
-                    managerCard.innerHTML = `
-                        <img src="${photo.data}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center space-x-2">
-                            <button onclick="setMainPhoto(${photo.id})" title="Foto Principal" class="text-amber-300 hover:text-amber-100 text-xs p-1">
-                                <i class="fas fa-star ${photo.isMain ? 'text-amber-400' : ''}"></i>
-                            </button>
-                            <button onclick="deletePhoto(${photo.id})" title="Eliminar" class="text-rose-400 hover:text-rose-200 text-xs p-1">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    `;
-                    managerPhotoList.appendChild(managerCard);
-                });
-
-                if (!mainFound && photos.length > 0) {
-                    setMainPhoto(photos[0].id);
-                }
-            };
-        }
-
-        function setMainPhoto(id) {
-            const tx = db.transaction("photos", "readwrite");
-            const store = tx.objectStore("photos");
-            store.getAll().onsuccess = function(e) {
-                const photos = e.target.result;
-                photos.forEach(p => {
-                    p.isMain = (p.id === id);
-                    store.put(p);
-                });
-                tx.oncomplete = cargarFotosDesdeDB;
-            };
-        }
-
-        function deletePhoto(id) {
-            const tx = db.transaction("photos", "readwrite");
-            const store = tx.objectStore("photos");
-            store.delete(id);
-            tx.oncomplete = cargarFotosDesdeDB;
-        }
-
-        // RESPALDOS JSON
-        function exportBackup() {
-            if (!db) return;
-            const txP = db.transaction("photos", "readonly").objectStore("photos").getAll();
-            const txM = db.transaction("music", "readonly").objectStore("music").getAll();
-
-            Promise.all([
-                new Promise(res => txP.onsuccess = () => res(txP.result)),
-                new Promise(res => txM.onsuccess = () => res(txM.result))
-            ]).then(([photos, music]) => {
-                const data = JSON.stringify({ photos, music });
-                const blob = new Blob([data], { type: "application/json" });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement("a");
-                a.href = url;
-                a.download = "respaldo_historia_joel_y_lucero.json";
-                a.click();
-            });
-        }
-
-        function importBackup(e) {
-            const file = e.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(evt) {
-                try {
-                    const backup = JSON.parse(evt.target.result);
-                    if (backup.photos && backup.music) {
-                        const txP = db.transaction("photos", "readwrite");
-                        const storeP = txP.objectStore("photos");
-                        storeP.clear();
-                        backup.photos.forEach(p => storeP.add(p));
-
-                        const txM = db.transaction("music", "readwrite");
-                        const storeM = txM.objectStore("music");
-                        storeM.clear();
-                        backup.music.forEach(m => storeM.add(m));
-
-                        setTimeout(() => {
-                            cargarFotosDesdeDB();
-                            cargarMusicaDesdeDB();
-                            alert("¡Respaldo restaurado con éxito!");
-                        }, 500);
-                    }
-                } catch(err) {
-                    alert("El archivo de respaldo no es válido.");
-                }
-            };
-            reader.readAsText(file);
+            // Música
+            const audioEl = document.getElementById('bgAudio');
+            audioEl.src = CANCION_URL;
+            document.getElementById('musicTitle').innerText = CANCION_TITULO;
         }
 
         // REPRODUCTOR MÚSICA
@@ -948,14 +761,13 @@
         const eqContainer = document.getElementById('eqContainer');
 
         musicToggle.addEventListener('click', () => {
-            if (!bgAudio.src) {
-                alert("Primero sube un archivo MP3 tocando en 'Gestionar Fotos, Música y Respaldo'.");
-                return;
-            }
             if (bgAudio.paused) {
-                bgAudio.play();
-                musicIcon.className = "fas fa-pause text-xs";
-                eqContainer.classList.remove('hidden');
+                bgAudio.play().then(() => {
+                    musicIcon.className = "fas fa-pause text-xs";
+                    eqContainer.classList.remove('hidden');
+                }).catch(err => {
+                    alert("Asegúrate de colocar un enlace de música válido en el código.");
+                });
             } else {
                 bgAudio.pause();
                 musicIcon.className = "fas fa-play text-xs ml-0.5";
@@ -1046,21 +858,12 @@
             document.getElementById('modalImage').classList.add('opacity-0', 'pointer-events-none');
         }
 
-        document.getElementById('btnOpenManager').addEventListener('click', () => {
-            document.getElementById('modalManager').classList.remove('opacity-0', 'pointer-events-none');
-        });
-
-        function closeManager() {
-            document.getElementById('modalManager').classList.add('opacity-0', 'pointer-events-none');
-        }
-
         // ESCAPE KEY TO CLOSE MODALS
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeLetter();
                 closeGiftModal();
                 closeImageModal();
-                closeManager();
             }
         });
 
@@ -1179,6 +982,8 @@
         }
 
         window.onload = function() {
+            cargarFotosYMusica();
+
             bgParticles = [];
             for (let i = 0; i < 50; i++) {
                 bgParticles.push(new Sparkle());
